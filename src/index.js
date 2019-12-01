@@ -24,7 +24,7 @@
  */
 
 /**
- * XAJAX AJAX library.
+ * axaj AJAX library.
  */
 
 import ImmutableLinkedOrderedMap, {

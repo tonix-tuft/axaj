@@ -1,5 +1,5 @@
 {
-  "name": "xajax",
+  "name": "axaj",
   "version": "1.0.0",
   "description": "A tiny and trivial AJAX library which uses the Fetch API.",
   "keywords": [
@@ -14,7 +14,7 @@
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tonix-tuft/xajax.git"
+    "url": "https://github.com/tonix-tuft/axaj.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -32,9 +32,9 @@
     "webpack-cli": "^3.3.10"
   },
   "bugs": {
-    "url": "https://github.com/tonix-tuft/xajax/issues"
+    "url": "https://github.com/tonix-tuft/axaj/issues"
   },
-  "homepage": "https://github.com/tonix-tuft/xajax#readme",
+  "homepage": "https://github.com/tonix-tuft/axaj#readme",
   "dependencies": {
     "immutable-linked-ordered-map": "^0.20.0",
     "interval-jitter": "^1.1.0",

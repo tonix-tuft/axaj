@@ -1,7 +1,7 @@
 const webpack = require("webpack");
-const libraryName = "xajax";
+const libraryName = "axaj";
 let outputFile;
-const library = "XAJAX";
+const library = "axaj";
 const srcEntryPoint = "index.js";
 const path = require("path");
 
