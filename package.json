@@ -1,0 +1,43 @@
+{
+  "name": "xajax",
+  "version": "1.0.0",
+  "description": "A tiny and trivial AJAX library which uses the Fetch API.",
+  "keywords": [
+    "npm",
+    "library",
+    "template"
+  ],
+  "author": "Anton Bagdatyev (Tonix-Tuft)",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.es6.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tonix-tuft/xajax.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "WEBPACK_ENV=watch webpack --progress --colors --watch",
+    "build": "WEBPACK_ENV=build webpack"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.9.0",
+    "@typescript-eslint/parser": "^2.9.0",
+    "eslint": "^6.7.2",
+    "terser-webpack-plugin": "^1.4.1",
+    "typescript": "^3.7.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "bugs": {
+    "url": "https://github.com/tonix-tuft/xajax/issues"
+  },
+  "homepage": "https://github.com/tonix-tuft/xajax#readme",
+  "dependencies": {
+    "immutable-linked-ordered-map": "^0.20.0",
+    "interval-jitter": "^1.1.0",
+    "js-utl": "^1.2.0"
+  }
+}
