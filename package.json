@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "A tiny and trivial AJAX library which uses the Fetch API.",
   "keywords": [
-    "npm",
-    "library",
-    "template"
+    "ajax",
+    "fetch-api",
+    "xhr",
+    "xml-http-request"
   ],
   "author": "Anton Bagdatyev (Tonix-Tuft)",
   "license": "MIT",
