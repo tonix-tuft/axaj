@@ -10,9 +10,8 @@
   ],
   "author": "Anton Bagdatyev (Tonix-Tuft)",
   "license": "MIT",
-  "main": "./dist/index.js",
-  "module": "./dist/index.es6.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/axaj.js",
+  "module": "./src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/tonix-tuft/axaj.git"
