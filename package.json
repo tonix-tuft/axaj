@@ -8,7 +8,7 @@
     "xhr",
     "xml-http-request"
   ],
-  "author": "Anton Bagdatyev (Tonix-Tuft)",
+  "author": "Anton Bagdatyev (Tonix)",
   "license": "MIT",
   "main": "./dist/axaj.js",
   "module": "./src/index.js",
