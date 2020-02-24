@@ -38,6 +38,6 @@
   "dependencies": {
     "immutable-linked-ordered-map": "^0.20.1",
     "interval-jitter": "^1.1.1",
-    "js-utl": "^1.6.0"
+    "js-utl": "^3.0.0"
   }
 }
