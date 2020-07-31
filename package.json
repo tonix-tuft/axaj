@@ -1,6 +1,6 @@
 {
   "name": "axaj",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "description": "A tiny and trivial AJAX library which uses the Fetch API.",
   "keywords": [
     "ajax",
