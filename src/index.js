@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 Anton Bagdatyev (Tonix)
+ * Copyright (c) 2021 Anton Bagdatyev (Tonix)
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -28,7 +28,7 @@
  */
 
 import ImmutableLinkedOrderedMap, {
-  ImmutableLinkedOrderedMapMode
+  ImmutableLinkedOrderedMapMode,
 } from "immutable-linked-ordered-map";
 import { checkNetwork, buildQueryString, formData } from "js-utl";
 import IntervalJitter from "interval-jitter";
@@ -77,35 +77,35 @@ export const config = {
   },
   setCheckNetworkInterval: interval => {
     checkNetworkInterval = interval;
-  }
+  },
 };
 
 /**
  * @type {Object}
  */
 const defaultOptions = {
-  credentials: "same-origin"
+  credentials: "same-origin",
 };
 
 /**
  * @type {ImmutableLinkedOrderedMap}
  */
 let onNoNetworkHandlers = new ImmutableLinkedOrderedMap({
-  mode: ImmutableLinkedOrderedMapMode.LIGHTWEIGHT
+  mode: ImmutableLinkedOrderedMapMode.LIGHTWEIGHT,
 });
 
 /**
  * @type {ImmutableLinkedOrderedMap}
  */
 let onNetworkRestoredHandlers = new ImmutableLinkedOrderedMap({
-  mode: ImmutableLinkedOrderedMapMode.LIGHTWEIGHT
+  mode: ImmutableLinkedOrderedMapMode.LIGHTWEIGHT,
 });
 
 /**
  * @type {ImmutableLinkedOrderedMap}
  */
 let onStillNoNetworkHandlers = new ImmutableLinkedOrderedMap({
-  mode: ImmutableLinkedOrderedMapMode.LIGHTWEIGHT
+  mode: ImmutableLinkedOrderedMapMode.LIGHTWEIGHT,
 });
 
 /**
@@ -117,7 +117,7 @@ let onStillNoNetworkHandlers = new ImmutableLinkedOrderedMap({
 export function addOnNoNetworkHandler(handler) {
   noNetworkHandlerId++;
   onNoNetworkHandlers = onNoNetworkHandlers.set({
-    [noNetworkHandlerId]: handler
+    [noNetworkHandlerId]: handler,
   });
   return noNetworkHandlerId;
 }
@@ -142,7 +142,7 @@ export function removeOnNoNetworkHandler(handlerId) {
 export function addOnNetworkRestoredHandler(handler) {
   networkRestoredHandlerId++;
   onNetworkRestoredHandlers = onNetworkRestoredHandlers.set({
-    [networkRestoredHandlerId]: handler
+    [networkRestoredHandlerId]: handler,
   });
   return networkRestoredHandlerId;
 }
@@ -167,7 +167,7 @@ export function removeOnNetworkRestoredHandler(handlerId) {
 export function addOnStillNoNetworkHandler(handler) {
   stillNoNetworkHandlerId++;
   onStillNoNetworkHandlers = onStillNoNetworkHandlers.set({
-    [stillNoNetworkHandlerId]: handler
+    [stillNoNetworkHandlerId]: handler,
   });
   return stillNoNetworkHandlerId;
 }
@@ -261,9 +261,9 @@ function decorateObjectWithCSRFTokenIfSet(data) {
     ...data,
     ...((CSRFTokenName &&
       CSRFTokenValue && {
-        [CSRFTokenName]: crossSiteRequestForgeryTokenValue(CSRFTokenValue)
+        [CSRFTokenName]: crossSiteRequestForgeryTokenValue(CSRFTokenValue),
       }) ||
-      {})
+      {}),
   };
 }
 
@@ -279,7 +279,7 @@ export function GET(URI, init) {
     fetch(URI, {
       ...defaultOptions,
       ...(init || {}),
-      method: "GET"
+      method: "GET",
     })
   );
 }
@@ -305,7 +305,7 @@ export function POST(URI, data, init) {
       ...defaultOptions,
       ...options,
       method: "POST",
-      body: data || {}
+      body: data || {},
     })
   );
 }
@@ -324,8 +324,8 @@ export function POSTJSON(URI, data, init) {
     ...options,
     headers: {
       ...(options.headers || {}),
-      "Content-Type": "application/json"
-    }
+      "Content-Type": "application/json",
+    },
   });
 }
 
@@ -343,8 +343,8 @@ export function POSTFormURLEncoded(URI, data, init) {
     ...options,
     headers: {
       ...(options.headers || {}),
-      "Content-Type": "application/x-www-form-urlencoded"
-    }
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
   });
 }
 
